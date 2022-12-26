@@ -583,6 +583,11 @@ var UIController = (function () {
         finalResult: function (currPerson) {
 
             domItems.finalScoreText.textContent = currPerson.fullname[0] + ' ' + currPerson.fullname[1] + ', ' + 'your final score is ' + currPerson.score;
+            
+            if(currPerson.score === 0)
+            {
+                setTimeout(window.location.href = "http://healthcollective.in/contact/helplines/", 2000);
+            }
 
             domItems.quizSection.style.display = 'none';
 
